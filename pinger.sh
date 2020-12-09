@@ -21,12 +21,7 @@ echo "-f or --file: send to  multiple adress from a file"
 echo "examples: pinger -h 192.168.1.1 or pinger -f iplist.txt"
 fi
 
-##############################################define function and vars##########
-
-
-#if [[ $2  =~  ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-
-
+##############################################define functions and vars##########
 function hpinger() {
 echo $host
  ping -c1 -w1 -i0.2 $host &>/dev/null
