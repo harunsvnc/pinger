@@ -11,14 +11,14 @@ fi
  if [ $1 =="-h" or $1 == "--help" ]; then
 echo "Usage:<$0> < parameter>"
 echo "-h or --help: see this manual"
-echo "-s or --host : send packet to one host"
+echo "-d or --dhost : send packet to one host"
 echo "-f or --file: send to  multiple adress from a file"
 echo "examples: pinger -h 192.168.1.1 or pinger -f iplist.txt"
 fi
 
 
 ######################################for -s###########################
-if [ $1 == "-s" or $1 == "--host"  ]; then
+if [ $1 == "-d" or $1 == "--dhost"  ]; then
 if [[ $2  =~  ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
 ping -c1 $2 &>/dev/null
 if  [ $? -eq 0 ]
